@@ -1,0 +1,40 @@
+.section-title {
+
+    @media (max-width: map_get($grid-breakpoints, md)) {
+        font-size: 22px;
+    }
+
+    .title-decoration {
+        top: 1.5rem;
+        height: 20px;
+        background-color: $danger;
+        z-index: 2;
+
+        @media (max-width: map_get($grid-breakpoints, md)) {
+            top: .75rem;
+            height: 10px !important;
+        }
+
+        &--left {
+            left: -1000px;
+            right: -75px;
+
+            @media (max-width: map_get($grid-breakpoints, md)) {
+                right: 20px !important;
+            }
+        }
+
+        &--right {
+            right: -1000px;
+            left: -75px;
+
+            @media (max-width: map_get($grid-breakpoints, md)) {
+                left: 20px !important;
+            }
+        }
+    }
+
+    &__text {
+        z-index: 3;
+    }
+}

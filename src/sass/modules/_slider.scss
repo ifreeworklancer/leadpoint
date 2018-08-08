@@ -1,0 +1,127 @@
+.briefcases-slider {
+
+    .slick-list {
+        left: -5.5%;
+
+        @media (max-width: 1500px) {
+          left: 0;
+       }
+    }
+    .slick-slide {
+        opacity: 0;
+        transition: .3s;
+
+        &.slick-active {
+            opacity: 1;          
+        }
+    }
+
+    .custom-dots {
+        padding-left: 0;
+        position: absolute;
+        bottom: 15%;
+        left: 35%;
+
+        @media (max-width: 1500px) {
+          left: 50%;
+          transform: translate(-50%, 0);
+          bottom: 0;
+       }
+    
+        li {
+          margin: 0 0 0 20px;
+          display: inline-block;
+          list-style: none;
+          font-size: 0;
+    
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+        button {
+          display: block;
+          width: 14px;
+          height: 14px;
+          text-decoration: none;
+          background-color: transparent;
+          border: 1px solid $danger;
+          border-radius: 50%;
+          outline: none;
+          cursor: pointer;
+    
+          .string {
+            position: absolute;
+            left: -99999px;
+            line-height: 0;
+            opacity: 0;
+          }
+        }
+        // active slide
+        .slick-active button {
+          background-color: $danger;
+        }
+        // hover event
+        button:hover,
+        .custom-dots .slick-active button:hover {
+            background-color: $danger;
+            opacity: .6;
+        }
+      }
+}
+#previews-slider-desktop {
+  z-index: 10;
+
+  .slider-item {
+    position: relative;
+  }
+
+  .slick-slide {
+    opacity: 0;
+    transition: .5s;
+
+    &.slick-active {
+      opacity: 1;
+    }
+  }
+
+  .slick-list {
+    overflow: visible !important;
+  }
+
+  .slick-dots {
+    left: -120px;
+    bottom: -50px;
+    transform: translate(-50%, 0);
+    max-width: 255px;
+    display: flex !important;
+    background-color: #373c45;
+
+    @media (max-width: map_get($grid-breakpoints, md)) {
+      bottom: -150px;
+      left: 50%;
+  }
+    li {
+        margin: 0;
+        flex: 1 0 auto !important;
+        height: 2px;
+        background-color: #373c45;
+        &.slick-active {
+            height: 3px;
+            background-color: $danger;
+            margin-top: -1px;
+            .dot-numbers {
+              color: #fff;
+            }
+        }
+        .dot-numbers {
+          position: relative;
+          bottom: -20px;
+        }                
+    }
+  }
+}
+
+#previews-slider-mobile {
+  @extend #previews-slider-desktop;
+
+}

@@ -1,0 +1,21 @@
+.more-info {
+    line-height: 2;
+    letter-spacing: 2px;
+    outline: none !important;
+    cursor: pointer;
+
+    svg {
+        position: absolute;
+        right: -5px;
+        top: -2px;
+        transition: right linear .3s;
+    }
+
+    &:hover {
+        text-decoration: none;
+
+        svg {
+            right: -20px;
+        }
+    }
+}

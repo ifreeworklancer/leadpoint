@@ -1,0 +1,25 @@
+$primary: #aeb0be;
+$danger: #d4181f;
+$light: #373c45;
+$dark: #13161b;
+$secondary: #191c22;
+
+$body-bg:  $dark !default;
+$body-color: $primary !default;
+
+$font-size-base: 1rem;
+$font-family-base: 'Play', sans-serif;
+$headings-font-family: 'Play', sans-serif;
+$headings-font-weight: bold;
+
+$link-hover-decoration:     none !default;
+$input-btn-focus-width:       0 !default;
+$input-btn-focus-color:       rgba(#fff, 0) !default;
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+
+$border-radius: 0;
+$btn-padding-x: 50px;
+$btn-padding-y: 20px;
+
+$h2-font-size:                $font-size-base * 3 !default;
+

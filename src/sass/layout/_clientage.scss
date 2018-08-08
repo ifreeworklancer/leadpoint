@@ -1,0 +1,17 @@
+#clientage {
+    padding: 180px 0;
+
+    .container {
+        max-width: 1250px;
+    }
+}
+.clientage-container {
+
+    &__item {
+        width: 100%;
+        max-width: 230px;
+        margin-top: 40px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+}

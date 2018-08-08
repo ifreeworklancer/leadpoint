@@ -1,0 +1,121 @@
+#instruments {
+    margin-top: 140px;
+
+    .container {
+        max-width: 1260px !important;
+    }
+}
+.instruments-tabs {
+    padding-bottom: 80px;
+    background-color: #191d23;
+    box-shadow: 0px 3px 18.96px 5.04px rgba(0, 0, 0, 0.17);
+      
+}
+
+.tabs__caption {
+    position: relative;
+    background-color: $dark;
+
+    .caption-item {
+        flex: 1 0 auto;
+        height: 220px;
+        margin-right: 2px;
+        background-color: #191d23;
+        padding: 100px;
+        height: 100%;
+        box-shadow: inset -6px -12px 142px -20px rgba(0,0,0,0.75);
+        
+        &__text {
+            width: 101%;
+            left: 0;
+            right: 0;
+            bottom: -70px;
+            background-color: #25292f;
+            font-size: 34px;
+            text-align: center;
+            transition: .5s;
+            user-select: none;
+            z-index: 10;
+
+            @media (max-width: map_get($grid-breakpoints, md)) {
+                bottom: -30px;
+                font-size: 24px;
+            }
+
+            &--last {
+                width: 100%;
+            }
+        }
+
+        svg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: .5s;
+
+            &.development-icon {
+                top: 55%;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.active {
+            background-color: #191d23;
+            box-shadow: none;
+
+            &.tabs-facebook {
+                color: #6170a2;
+            }
+
+            &.tabs-instagram {
+                color: #E09B3D;
+            }
+
+            &.tabs-youtube {
+                color: $danger;
+            }
+
+            &.tabs-development {
+                color: #49c8a0;
+            }
+
+            svg {
+                width: 155px;
+                height: 155px;
+
+                &.development-icon {
+                    width: 355px;
+                    height: 355px;
+                }
+
+                @media (max-width: map_get($grid-breakpoints, md)) {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+    }
+}
+
+.tabs__content {
+    display: none; 
+    font-size: 20px;
+    padding: 100px 230px 0;
+
+    @media (max-width: map_get($grid-breakpoints, md)) {
+        padding: 100px 15px 0;
+    }
+
+    p {
+        margin-bottom: 40px;
+    }
+
+    &.active {
+        display: block;
+    }
+}
+

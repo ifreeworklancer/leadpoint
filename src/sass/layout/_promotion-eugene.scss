@@ -1,0 +1,59 @@
+#promotion-eugene {
+    transform: rotate(8deg);
+    overflow: hidden;
+    z-index: 10;
+    width: 107%;
+
+    @media (max-width: map_get($grid-breakpoints, xl)) {
+        transform: rotate(0deg);
+    }
+
+    .norm-rotate {
+        padding-top: 400px;
+        padding-bottom: 80px;
+        transform: rotate(-8deg);
+        @media (max-width: map_get($grid-breakpoints, xl)) {
+            padding-top: 200px;
+            transform: rotate(0deg);
+        }
+    }
+
+    .main-info {
+        max-width: 580px;
+    }
+
+    .quote {
+        margin-top: 80px;
+        max-width: 370px;
+        border-top: 1px solid #959595;
+    }
+
+    .logo-bg {
+        right: -40%;
+        bottom: -5%;
+    }
+
+    .promotion-img {
+        right: -5%;
+        bottom: -20%;
+        z-index: -5;
+
+
+        img {
+
+            &.eugene-img {
+                left: -20%;
+            }
+        }
+    }
+
+    .bg {
+        width: 50%;
+        height: 25%;
+        right: 0;
+        bottom: -100px;
+        z-index: -6;
+        transform: rotate(-15deg);
+        box-shadow: 0px 0px 42px 18px rgba(0, 0, 0, 0.18);
+    }
+}

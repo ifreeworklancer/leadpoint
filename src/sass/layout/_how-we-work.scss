@@ -1,0 +1,59 @@
+#how-we-work {
+    padding: 140px 0 60px;
+    background-color: #1c1f24;
+
+    .main-img {
+        right: -10%;
+        width: 100%;
+        max-width: 940px;
+        min-height: 540px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+
+        @media (max-width: map_get($grid-breakpoints, md)) {
+            position: static;
+            background-size: contain;
+            width: 100%;
+            right: 0;
+            min-height: 300px;
+        }
+    }
+}
+
+.work-main-info {
+    position: absolute;
+    top: 190px;
+    left: 50%;
+    right: 0;
+    padding-bottom: 65px;
+    background-color: #191c22;
+    box-shadow: 0px 25px 31.74px 14.26px rgba(0, 0, 0, 0.17);
+
+    @media (max-width: map_get($grid-breakpoints, md)) {
+        position: static;
+    }
+      
+    &__title {
+        font-size: 22px;
+    }
+
+    &__name {
+        top: -45px;
+    }
+
+    .main-info-list {
+        margin-top: 50px;
+        width: 100%;
+        max-width: 555px;
+
+        &__item {
+            border-top: 1px solid $light;
+            border-bottom: 1px solid $light;
+
+            .list-item-container {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    }
+}

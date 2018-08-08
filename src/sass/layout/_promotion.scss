@@ -1,0 +1,91 @@
+#promotion {
+    width: 100%;
+    margin-top: 0;
+    left: 0;
+    transform: rotate(0);
+    background-color: #2a2e36;
+    box-shadow: 0px 0px 39.33px 17.67px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    z-index: 20;
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+        width: 88%;
+        margin-top: -10%;
+        left: -15%;
+        transform: rotate(-19deg);
+    }
+
+    .norm-rotate {
+        padding: 300px 0 350px;
+        transform: rotate(0);
+
+        @media (min-width: map_get($grid-breakpoints, xl)) {
+            padding: 30% 0 10%;
+            transform: rotate(19deg);
+        }
+    }
+
+    .rotate-img {
+        overflow: hidden;
+        left: 11%;
+        bottom: -10.5%;
+        transform: rotate(19deg);
+
+        @media (max-width: map_get($grid-breakpoints, xl)) {
+            width: 55%;
+            left: 0;
+            bottom: 0;
+            transform: rotate(0deg);
+            z-index: -5;
+        }
+    }
+
+    .section-title {
+        width: 97%;
+
+        .title-decoration {
+            left: 0;
+            right: 25px;
+        }
+    }
+
+    .scrolldown {
+        height: 100px;
+        position: absolute;
+        bottom: -5px;
+        left: 35%;
+        transform: rotate(19deg);
+
+        @media (max-width: map_get($grid-breakpoints, xl)) {
+            transform: rotate(0);
+        }
+        
+        &__line {
+            width: 3px;
+            height: 100%;
+            display: block;
+            background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            background-position: 0 -100px;
+            background-size: 100% 200%;
+            animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+        }
+
+        &__text {
+            width: 120px;
+            top: 10px;
+            left: 15px;
+        }
+    }
+
+    @keyframes scrolldown {
+        0%{
+            background-position: 0 -100px;
+        }
+        75% {
+            background-position: 0 0;
+        }
+        100%{
+            background-position: 0 100px;
+        }
+    }
+}
